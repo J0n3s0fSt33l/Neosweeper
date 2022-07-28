@@ -47,7 +47,7 @@ done
 
 #Cleanup logs
 sort Services.txt-temp | sed '/Discovered/d' | sort -n | uniq > Services.txt
-sort -n Open-ports.txt-temp | uniq > Open-ports.txt && rm Services.txt-temp Open-ports.txt-temp
+sort -un Open-ports.txt-temp > Open-ports.txt && rm Services.txt-temp Open-ports.txt-temp
 clear
 echo "The following services were discovered: "
 cat Services.txt
